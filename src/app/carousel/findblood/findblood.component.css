@@ -1,0 +1,38 @@
+
+/*added this comment so that git cannot ignore this file*/
+.table1{
+width:100%;
+}
+
+
+.bottom-lined-field{
+    border-bottom-color: white;
+    border-bottom-width: 2px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-radius: 0px;
+    color: white;
+}
+.bottom-lined-field:focus {
+    border-bottom-color: white;
+    border-bottom-width: 2px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-radius: 0px;
+    color: white;
+    background-color: #d32f2f;
+    box-shadow: none;/*removes the selection outline*/
+}
+
+.dropdown-menu{
+    background-color: white;
+    border-radius: 0px;
+    border-width: 0px;
+    color:red;
+}
+
+::placeholder { 
+    color: white;
+  }

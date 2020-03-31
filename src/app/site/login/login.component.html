@@ -1,0 +1,100 @@
+<div class="">
+    <div class="container py-5 mt-5">
+        <div class="row d-flex align-items-center py-5">
+
+            <!-- cards for account type-->
+            <div class="col-md-5">
+                <h5 class="font-weight-bold text-center py-4"> Register Here</h5>
+                <div class="row">
+
+                    <div class="col-6 d-flex align-items-stretch">
+                        <a class="" routerLink="/register">
+                            <div class="card">
+                                <img src="../../assets/image/loyalty.svg"
+                                    class="card-img-top account-type-img-resizes py-2 px-2">
+                                <div class="card-body text-center font-weight-bold">
+                                    User
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-6 d-flex align-items-stretch">
+                        <a class="" routerLink="/register-bloodbank">
+                            <div class="card">
+                                <img src="../../assets/image/Blood-Bank.svg"
+                                    class="card-img-top account-type-img-resizes py-2 px-2">
+                                <div class="card-body text-center font-weight-bold">
+                                    Blood Bank
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-2">
+
+            </div>
+
+            <!-- login part-->            
+            <div class="col-md-5 pt-2">
+                <div *ngIf="!this.validCredentials" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole!</strong> Invalid Credentials!
+                    <button (click)="dismiss()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                <div class="card">
+                    <div class="container py-4 px-4">
+                        <div>
+                            <div class="text-center">
+                                <img src="../assets/image/logo.svg" alt="logo" style="width:30px;">
+                            </div>
+                            <h3 class="text-center mb-4">
+                                LOGIN
+                            </h3>
+
+                        </div>
+                        <form>
+                            <div class="text-center">
+                                <p>dummy credentials</p>
+                                <p>username = user</p>
+                                <p>password = pwd</p>
+                            </div>
+                            <div class="form-label-group">
+                                <input [(ngModel)]='username' name="username" type="email" id="inputEmail"
+                                    class="form-control bottom-lined-field remove-selection" placeholder="UserName is user"
+                                    required autofocus>
+                                <label for="inputEmail"></label>
+                            </div>
+
+                            <div class="form-label-group">
+                                <input [(ngModel)]='password' name="password" type="password" id="inputPassword"
+                                    class="form-control bottom-lined-field remove-selection" placeholder="Password is pwd"
+                                    required>
+                                <label for="inputPassword"></label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">Remember
+                                    me</label>
+                            </div>
+                            <button (click)='onSubmit()'
+                                class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                type="submit">Sign in</button>
+                            <div class="text-center">
+                                <a class="small" href="#">
+                                    <div>Forgot password?</div>
+                                </a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

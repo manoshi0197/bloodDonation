@@ -1,0 +1,16 @@
+
+<div>
+    <div class="container">
+        <div *ngIf="submittedFeedback" class="alert alert-success" role="alert">
+            Posted Successfully.
+        </div>
+        <h2>Write Your Queries Here</h2>
+        <form>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea [(ngModel)]="question" name="askQuestion" class="form-control" rows="5"></textarea>
+            </div>
+            <button class="btn btn-primary" (click)="onPost()">Post</button>
+        </form>
+    </div>
+</div>

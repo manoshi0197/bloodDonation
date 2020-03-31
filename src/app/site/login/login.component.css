@@ -1,0 +1,52 @@
+.text1
+{
+color: black;
+}
+.bg-image
+{
+   height: 60%;
+   width: 60%;
+    
+}
+/*.sha
+{
+    box-shadow:20px 20px 50px 15px grey;  
+}*/
+.col1
+{
+    background-color: #d32f2f;
+}
+.col2
+{
+    height: 100%;
+    width: 100%;
+}
+.col3
+{
+    height: 80%;
+    width: 100%;
+    background-color: #d32f2f;
+
+}
+
+
+
+/*////////////*/
+a:hover{    
+    color: black;
+    border-radius: 0px;
+    background-color: whitesmoke;
+}
+
+/*satyajit*/
+.account-type-img-resizes{
+    height: 130px;
+}
+
+.bottom-lined-field{    
+    border-bottom-width: 2px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-radius: 0px;
+}

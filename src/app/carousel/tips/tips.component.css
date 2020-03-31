@@ -1,0 +1,32 @@
+a:hover{
+      color:rgb(219, 211, 211);
+}
+
+.index-card{
+ 
+    box-shadow:20px 20px 50px 15px rgb(189, 183, 183); 
+}
+
+.index-card:hover
+{
+    box-shadow:10px 10px 20px 20px rgb(160, 160, 160); 
+}
+
+.tips-cards-img-resizes{
+    height: 130px;
+}
+
+.justify-text{
+    text-align:justify;
+}
+
+.tips-main-image-size{
+    height:300px;
+    width: 300px;
+    justify-content: center;
+}
+
+.home-icons-size{
+    height:10%;
+    width:10%;
+}

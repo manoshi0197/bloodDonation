@@ -1,0 +1,52 @@
+<div class="container pt-5 mt-5">
+    <div class="card index-card">
+        <div class="container">
+
+            <div class="row py-5 d-flex align-items-center">
+                <div class="col-md-6 col-sm-12 d-none d-md-block">
+                    <div class="">
+                        <div class="text-center">
+                            <img class="donor-img-resizes" src="../assets/image/donor-registration.svg">
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class=" px-5">
+                        <div *ngIf="!this.isAlreadyDonor" class=" text-center">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3>
+                                        <p class="justify-text">Blood donation helps in lowering the risk of cancer. By
+                                            donating
+                                            blood
+                                            regularly the iron
+                                            level
+                                            in the blood is balanced and the risk of cancer-related to the liver, lungs,
+                                            and
+                                            intestine
+                                            gets
+                                            lower. Once we donate blood, the body tries to restore the blood loss.
+                                        </p>
+                                    </h3>
+                                </div>
+                                    <button (click)="onClick()" class="btn btn-danger col-12">Want To Become A Donor Register
+                                        Here!!</button>
+                            </div>
+                            
+                        </div>
+
+                        <div *ngIf="this.isAlreadyDonor" class=" text-center img4">
+                            <h3>
+                                <p class="justify-text">Your Are already a registered Donor.
+                                </p>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

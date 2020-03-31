@@ -1,0 +1,23 @@
+<div class="container pt-5 mt-5">
+  <div class="row">
+    <div class="col-4">
+      <img class="loyalty-size" src="../../assets/image/loyalty.svg">
+    </div>
+
+    <div class="col-8">
+      <div class="">
+        <h4>Select the question to Answer</h4>
+      </div>
+
+      <div class="py-1" *ngFor="let quest of faq">
+        <app-individual-admin-faq [quest]="quest" (answered)="this.updateUnAnsweredQuestion($event)">
+
+        </app-individual-admin-faq>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>

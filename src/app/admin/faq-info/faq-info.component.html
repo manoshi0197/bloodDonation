@@ -1,0 +1,33 @@
+<div class="card-body">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <div class="py-2 text-black " *ngFor="let question of faq">
+                            <br>
+                            <br>
+                            <br>
+                            {{question.question}}
+                        </div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="py-4 margin-top-10">
+                        <form>
+                            <div class="form-group text-gap">
+                                <label for="comment">Write your answere here:</label>
+                                <textarea class="form-control" rows="5" id="comment" name="answer" #myInput></textarea>
+                            </div>
+                            <button  class="btn btn-danger">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div>
+
+    <div class="jumbotron jumbotron-fluid mb-0 blood-bank-color">
+        <div class="text-center text-white">
+            <h1>Hi {{this.name}},</h1>
+            <h1>how can we help you?</h1>
+        </div>
+    </div>
+
+    <div class="container mt-4 py-4">
+        <div class="row">
+
+            <div class="col-4 d-none d-sm-block">
+                <!-- <div class="">
+                    <h4>Using test</h4>
+                </div>
+
+                <div class="py-1">
+                    <p>option 1</p>
+                </div>
+
+                <div class="py-1">
+                    <p>option 2</p>
+                </div> -->
+
+                <div class="">
+                    <img class="loyalty-size" src="../../assets/image/loyalty.svg">
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-8">
+                <div class="">
+                    <h4>Everything you need to know about Blood For Life</h4>
+                </div>
+
+                <div class="py-1" *ngFor="let faq of faqs">
+                    <p class="">
+                        <button class="accordion" type="button" data-toggle="collapse"
+                            [attr.data-target]="'#collapseExample'+ faq.faqId" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            {{faq.question}}
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseExample{{faq.faqId}}">
+                        <div class="card card-body">
+                            {{faq.answer}}
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <app-faq></app-faq>
+    </div>
+</div>

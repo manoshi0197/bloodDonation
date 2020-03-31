@@ -1,0 +1,53 @@
+<div class="py-4 text-center">
+    <h4>Donors From Pune</h4>
+</div>
+
+
+<div class="container-fluid py-4">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item blood-bank-color">
+            <div class=" font-weight-bold row py-2 text-white">
+                <div class="col ml-0">
+                    Name
+                </div>
+                <div class="col px-0">
+                    Age
+                </div>
+                <div class="col ml-0 d-none d-sm-block">
+                    City
+                </div>
+                <div class="col ml-0">
+                    Contact Number
+                </div>
+            </div>
+        </li>
+
+
+
+        <li class="list-group-item" *ngFor="let donor of donorsList">
+            <div class="py-2 row d-flex align-items-center">
+
+                <div class="col ml-0">
+                    {{donor.firstName + donor.lastName}}
+                </div>
+                <div class="col pl-0 text-center">
+                    {{donor.age}}
+                </div>
+                <div class="col ml-0 d-none d-sm-block">
+                    {{donor.area}}
+            
+                </div>
+                <div class="col ml-0">
+                    <button class="btn btn-danger">{{donor.contactNumber}}</button>
+                </div>
+            
+            </div>
+        </li>
+
+        <div *ngIf="notAvailable" class="alert alert-danger" role="alert">
+            Specified blood is not available. Please click on the given link to Post your blood request.
+            <a href="/find-blood-requirement">Post My Request</a>
+        </div>
+    </ul>
+
+</div>

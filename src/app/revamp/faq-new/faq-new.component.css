@@ -1,0 +1,15 @@
+.loyalty-size{
+    height: 130px;
+}
+.accordion{
+    background-color: white;
+    border-width: 0px;
+}
+
+.accordion:focus{   
+    background-color: rgb(107, 134, 255);
+    color: white;
+    border-radius: 0px;
+    border-width: 0px; 
+    box-shadow: none;/*removes the selection outline*/
+}

@@ -1,0 +1,45 @@
+<div class="container-fluid py-4">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item blood-bank-color">
+            <div class=" font-weight-bold row py-2 text-white">
+                <div class="col ml-0">
+                    Blood Bank
+                </div>
+                <div class="col">
+                    City
+                </div>
+                <div class="col ml-0">
+                    Contact Number
+                </div><!-- 
+                <div class="col-3 ml-0">
+                    Action
+                </div> -->
+            </div>
+        </li>
+
+
+
+        <li class="list-group-item" *ngFor="let bloodBank of bloodBankList">
+            <div class="row py-2">
+                <div class="col ml-0">
+                    {{bloodBank.bloodBankName}}
+                </div>
+                <div class="col text-center">
+                    {{bloodBank.city}}
+                </div>
+                <div class="col">
+                    {{bloodBank.contactNumber}}
+                </div><!-- 
+                <div class="col-3 ml-0">
+                    View
+                </div> -->
+            </div>
+        </li>
+
+        <div *ngIf="notAvailable" class="alert alert-danger" role="alert">
+            Specified blood is not available. Please click on the given link to Post your blood request.
+            <a href="/find-blood-requirement">Post My Request</a>
+        </div>
+    </ul>
+
+</div>

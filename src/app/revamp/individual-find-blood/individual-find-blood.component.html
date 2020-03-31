@@ -1,0 +1,21 @@
+<div class="py-2 row d-flex align-items-center">
+
+    <div class="col">
+        <img *ngIf="blood.bloodGroup" src="{{this.url}}" class="d-none d-sm-block img-resize-to-ten-percent">
+        {{blood.bloodGroup}}
+    </div>
+    <div class="col text-wrap">
+        {{blood.hospitalName}}
+    </div>
+    <div class="col  text-center">
+        <span class="badge badge-danger badge-pill px-4 py-2">{{blood.units}}<div class="d-none d-sm-block">units</div></span>
+    </div>
+    <div class="col  text-center pt-2" *ngIf="!checkIfUnitsEqualToZero()">
+        <button class="btn btn-danger" [routerLink]="['/blood-details',blood.id]">request</button>
+    </div>
+    <div class="col text-center pt-2" *ngIf="checkIfUnitsEqualToZero()">
+        <button class="btn btn-secondary">Not Available</button>
+        <!-- <button class="btn btn-secondary" routerLink="/blood-requirement">Post Your Request</button> -->
+    </div>
+    
+</div>

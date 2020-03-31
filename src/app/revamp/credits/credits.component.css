@@ -1,0 +1,82 @@
+.hospital-img-resize{
+    width: 60%;
+    height: 60%;
+}
+
+.slanted-div-bottom{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #d32f2f;
+}
+.slanted-div-bottom:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    transform-origin: top left;
+    transform:skewY(5deg);
+    z-index: -1;
+}
+
+
+.slanted-div-top{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #d32f2f;
+}
+.slanted-div-top:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    transform-origin: top left;
+    transform:skewY(5deg);
+    z-index: -1;
+}
+
+.slant-positive{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #d32f2f;
+    transform:skewY(8deg);
+    -ms-transform: skewY(8deg);
+}
+.anti-slant-positive{
+    transform:skewY(-8deg);
+    -ms-transform: skewY(-8deg);
+}
+
+.slant-negative{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #d32f2f;
+    transform:skewY(-8deg);
+    -ms-transform: skewY(-8deg);
+}
+.anti-slant-negative{
+    transform:skewY(8deg);
+    -ms-transform: skewY(8deg);
+}
+
+.fit-div-to-screen {
+    position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}

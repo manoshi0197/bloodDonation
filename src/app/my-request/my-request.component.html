@@ -1,0 +1,73 @@
+<div class="container-fluid mt-5">
+    <div class="col-12 py-5">
+
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            My Blood Requests
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th>Blood Bank Name</th>
+                        <th>Blood Group</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let req of myRequests">
+                        <td>{{req.bloodBankName}}</td>
+                        <td>{{req.bloodGroup}}</td>
+                        <td>
+                            <div>
+                                <div>
+                                    <div *ngIf="req.approved" class="btn badge-success">Accepted</div>
+                                </div>
+                                <div>
+                                    <div *ngIf="req.rejected" class="btn badge-danger">Rejected </div>
+                                </div>
+                                <div>
+                                    <div *ngIf="req.pending" class="btn badge-warning">Pending </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- <div class="card">
+        <div class="card-header">
+            My Slots
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th>Blood Bank Name</th>
+                        <th>Blood Group</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sanjeevani hospital</td>
+                        <td>B+</td>
+                        <td>2019-12-01</td>
+                        <td>09:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>Wakad hospital</td>
+                        <td>B+</td>
+                        <td>2019-12-30</td>
+                        <td>09:00:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+</div>

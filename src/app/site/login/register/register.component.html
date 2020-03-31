@@ -1,0 +1,129 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- decoration-->
+        <div class="col-lg-6 register-back-img">
+
+        </div>
+        <div class="col-lg-6">
+
+            <!-- signup form-->
+            <div class="container-fluid py-5">
+                <div class="card-body">
+                    <h2 class="text-center font-weight-bold pt-4">Create User Account</h2>
+                    <form [formGroup]="registerForm">
+                        <div class="form-group row mt-4">
+                            <div *ngIf="!this.validCredentials" class="alert alert-danger alert-dismissible fade show col-12"
+                                role="alert">
+                                <strong>Holy guacamole!</strong> Invalid Details!
+                                <button (click)="dismiss()" type="button" class="close" data-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <label for="usrName" class="">Username</label>
+                                <input type="text" formControlName="Username" class="form-control form-control"
+                                    id="usrName" placeholder="Enter Username">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="first" class="">First Name</label>
+                                <input type="text" formControlName="FirstName" class="form-control form-control"
+                                    id="first" placeholder="Enter First Name">
+                            </div>
+                            <div class="col-6 ">
+                                <label for="last" class="mr-2">Last Name</label>
+                                <input type="text" formControlName="LastName" class="form-control form-control"
+                                    id="last" placeholder="Enter Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="age" class="">Age</label>
+                                <input type="text" formControlName="Age" class="form-control form-control" id="age"
+                                    placeholder="Enter Age">
+                            </div>
+                            <div class="col-6">
+                                <label for="gender" class="">Gender</label>
+                                <select formControlName="Gender" class="form-control">
+                                    <option>Male</option>
+                                    <option>Female</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="Contact number" class="">Contact number</label>
+                                <input type="text" formControlName="Contactnumber" class="form-control form-control"
+                                    id="pass" placeholder="10-digit contact number">
+                            </div>
+                            <div class="col-6">
+                                <label for="Weight" class="">Weight</label>
+                                <input type="text" formControlName="Weight" class="form-control form-control"
+                                    id="weight" placeholder="Enter Weight">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <label for="Email" class="">Email</label>
+                                <input type="text" formControlName="Email" class="form-control form-control"
+                                    id="confpass" placeholder="Enter Your Email Address">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="State" class="">State</label>
+                                <select formControlName="State" class="form-control"
+                                    (click)="getCities($event.target.value)">
+                                    <option *ngFor="let state of States">{{state}}</option>
+                                </select>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="Area" class="">City</label>
+                                <select formControlName="Area" class="form-control">
+                                    <option *ngFor="let city of Cities">{{city}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="Pincode" class="">Pincode</label>
+                                <input formControlName="Pincode" type="text" class="form-control form-control" id="pass"
+                                    placeholder="Enter Pincode">
+                            </div>
+                            <div class="col-6">
+                                <label for="bloodgroup" class="">BloodGroup</label>
+                                <select formControlName="BloodGroup" type="text" class="form-control" id="confpass">
+                                    <option *ngFor="let type of bloodTypes">{{type}}</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="password" class="">Password</label>
+                                <input formControlName="Password" type="text" class="form-control form-control"
+                                    id="pass" placeholder="Enter Password">
+                            </div>
+                            <div class="col-6">
+                                <label for="confpass" class="text-nowrap">Confirm Password</label>
+                                <input formControlName="ConfirmPassword" type="text" class="form-control form-control"
+                                    id="confpass" placeholder="Enter Password">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" (click)="onSubmit()" class="btn btn-primary col-12">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

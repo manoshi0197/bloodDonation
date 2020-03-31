@@ -1,0 +1,81 @@
+<div class="container mt-5 py-5">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+            <img class="hospital-img-resize" src="./../assets/image/hosp.svg">
+        </div>
+
+        <div class="col-md-6 d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-header font-weight-bold text-center">
+                        <p>Donation Camp Detail</p>
+                    </div>
+                    <div class="card-body py-3 px-3">
+                        <div class="row ">
+                            <div class="col-6">
+                                <p>Camp Name:</p>
+                            </div>
+                            <div class="col-6">
+                                <p>{{donationCamp.campName}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Organised By:</p>
+                            </div>
+                            <div class="col-6">
+                                <p> {{donationCamp.organiserName}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Date:</p>
+                            </div>
+                            <div class="col-6">
+                                <p>{{donationCamp.date}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Venue</p>
+                            </div>
+                            <div class="col-6">
+                                <p>{{donationCamp.location}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row pt-2">
+                            <div class="col-6">
+                                <p class="font-weight-bold">From</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="font-weight-bold">To</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="">{{donationCamp.startTime}}</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="">{{donationCamp.endTime}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div *ngIf="!registered" class="card-footer text-center">
+                        <button (click)="onRegister()" class="btn btn-danger text-white"> Register </button>
+                    </div>
+
+                    <div *ngIf="registered" class="card-footer text-center text-dark">
+                        <button class="btn btn-grey"> Registered </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

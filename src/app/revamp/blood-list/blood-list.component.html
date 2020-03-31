@@ -1,0 +1,41 @@
+<div class="py-4 text-center">
+    <h4>Heading</h4>
+</div>
+
+
+<div class="container-fluid py-4">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item blood-bank-color">
+            <div class=" font-weight-bold row py-2 text-white">
+                <div class="col">
+                    Blood Type
+                </div>
+                <div class="col ">
+                    Blood Bank Name
+                </div>
+                <div class="col text-center">
+                    Units Available
+                </div>
+                <div class="col text-center d-none d-sm-block">
+                    Action
+                </div>
+            </div>
+        </li>
+
+
+
+        <li class="list-group-item" *ngFor="let blood of availableBlood">
+
+            <app-individual-find-blood [blood]="blood" (requestBlood)="this.blood.requestBlood($event)">
+
+            </app-individual-find-blood>
+
+        </li>
+
+        <div *ngIf="notAvailable" class="alert alert-danger" role="alert">
+            Specified blood is not available. Please click on the given link to Post your blood request.
+            <a href="/find-blood-requirement">Post My Request</a>
+        </div>
+    </ul>
+
+</div>

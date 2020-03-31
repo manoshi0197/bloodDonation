@@ -1,0 +1,16 @@
+.col3
+{
+    height: 80%;
+    width: 100%;
+    background-color: #d32f2f;
+
+}
+
+
+
+/*////////////*/
+a:hover{    
+    color: black;
+    border-radius: 0px;
+    background-color: whitesmoke;
+}

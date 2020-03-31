@@ -1,0 +1,17 @@
+<div class="row py-2 d-flex align-items-center">
+    <div class="col-3 mr-0">
+        {{donationCamp.organiserName}}
+    </div>
+    <div class="col-3 px-0">
+        {{donationCamp.campName}}
+    </div>
+    <div class="col-2 ml-0">
+        {{donationCamp.date}}
+    </div>
+    <div class="col-2 ml-0">
+        {{donationCamp.location}}
+    </div>
+    <div class="col-2 mr-0">
+        <button class="btn btn-danger" [routerLink]="['/donation-camp-detail',donationCamp.id]">Register</button>
+    </div>
+</div>
